@@ -283,13 +283,9 @@ const LISTENER_SCRIPT = `({
             document.body.saloeListen()
         }, listenAfterMs)
     }
-}`;
-const getScriptListener = ({
-  SRC_ELEMEMENTS_QUERY = [],
-  listenAfterMs = 2500
-} = {}) => {
-  return `<script defer>(${LISTENER_SCRIPT})({ SRC_ELEMEMENTS_QUERY: ${JSON.stringify(SRC_ELEMEMENTS_QUERY)}, listenAfterMs: ${listenAfterMs} })<\/script>`;
-};
+}`
+
+
 export {
-  getScriptListener
-};
+    LISTENER_SCRIPT,
+}
